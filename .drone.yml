@@ -1,8 +1,9 @@
 pipeline:
   build:
-    image: node
+    image: node:8
     commands:
       - npm install
       - npm test
     when:
+      branches: develop
       event: [push, pull_request, tag, deployment]
