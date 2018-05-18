@@ -4,5 +4,5 @@ pipeline:
     commands:
       - npm install
       - npm test
-
-branches: develop
+   when:
+      event: [push, pull_request, tag, deployment]
