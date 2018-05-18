@@ -1,9 +1,8 @@
-pipeline:
-  build:
-    image: node:8
-    commands:
-      - npm install
-      - npm test
-    when:
-      branches: develop
-      event: [push, pull_request, tag, deployment]
+build:
+  image: node:8
+  commands:
+    - npm install
+    - npm test
+  when:
+    branches: develop
+    event: [push, pull_request, tag, deployment]
