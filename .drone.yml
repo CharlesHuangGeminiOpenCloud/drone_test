@@ -6,11 +6,3 @@ pipeline:
       - npm test
     when:
       event: [push, pull_request, tag, deployment]
-
-  coffee:
-    image: shouldbee/coffeescript
-    commands:
-      - npm install
-      - coffee --compile -o lib/ src/
-      - cp lib/config.sample.js lib/config.js
-      - npm test
