@@ -1,9 +1,13 @@
 pipeline:
-  build:
-    image: node
+  backend:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
+
+  frontend:
+    image: node:6
     commands:
       - npm install
       - npm test
-    when:
-      event: [push, pull_request, tag, deployment]
-      branch: develop
