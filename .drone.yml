@@ -6,4 +6,3 @@ pipeline:
       - npm test
     when:
       branch: develop
-      event: [push, pull_request, tag, deployment]
